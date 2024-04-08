@@ -13,6 +13,24 @@
   color: #f0f; /* ホバー時の文字色を変更 */
 }
 
+.github-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #0366d6; /* GitHubのブランドカラー */
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.github-button:hover {
+    background-color: #005cc5; /* ホバー時の背景色 */
+}
+
 body {
   margin: 0;
   font-family: "Hiragino Kaku Gothic ProN";
