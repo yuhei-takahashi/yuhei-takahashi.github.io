@@ -33,12 +33,14 @@
 }
 
 .description {
-    font-size: 7px; /* 説明のフォントサイズを小さく */
+    font-size: 8px; /* 説明のフォントサイズを小さく */
     color: #cccccc; /* 説明の文字色 */
-    position: absolute; /* 絶対位置指定 */
-    bottom: -2px; /* 下に20pxの位置に配置 */
+    left: 0; /* 左端に配置 */
+    position: relative; /* 相対位置指定 */
+/*     position: absolute; /* 絶対位置指定 */ */
+/*     bottom: -2px; /* 下に20pxの位置に配置 */ */
 /*     left: 50%; /* 左端を中央に配置 */
-    transform: translateX(-50%); /* 中央揃え */ */
+/*     transform: translateX(-50%); /* 中央揃え */ */ */
 }
 
 header {
