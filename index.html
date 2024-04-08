@@ -22,7 +22,7 @@
   <header>
     <div class="container">
       <div class="header-left">
-        <img class="logo" id="logo" src="logo.png">
+        <a id="home">HOME</a>
       </div>
       <span class="fa fa-bars menu-icon"></span>
     </div>
@@ -141,10 +141,10 @@
 <!--   ここからJavascript -->
 <script>
     document.addEventListener('DOMContentLoaded', function () {
-        var logo = document.getElementById('logo');
+        var home = document.getElementById('home');
 
-        // ロゴがクリックされたときの処理
-        logo.addEventListener('click', function () {
+        // HOMEがクリックされたときの処理
+        home.addEventListener('click', function () {
             // ページの一番上にスクロールする
             window.scrollTo({
                 top: 0,
