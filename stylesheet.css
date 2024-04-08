@@ -35,7 +35,7 @@
 }
 
 .description {
-    font-size: 12px; /* 説明のフォントサイズを小さく */
+    font-size: 7px; /* 説明のフォントサイズを小さく */
     color: #cccccc; /* 説明の文字色 */
     left: 0; /* 左端に配置 */
     position: relative; /* 相対位置指定 */
