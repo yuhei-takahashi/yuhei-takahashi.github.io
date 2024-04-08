@@ -13,6 +13,13 @@
   color: #f0f; /* ホバー時の文字色を変更 */
 }
 
+.button-container {
+  display: flex; /* フレックスボックスを使用してボタンを縦に並べる */
+  flex-direction: column; /* ボタンを縦に配置 */
+  width: 30px; /* コンテナの幅 */
+  margin: 0 auto; /* 水平方向に中央に配置 */
+}
+
 .github-button {
     display: inline-block;
     padding: 15px 30px;
