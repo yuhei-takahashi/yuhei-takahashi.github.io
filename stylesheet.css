@@ -21,7 +21,7 @@
 }
 
 .github-button {
-    display: inline-block;
+  　　　　display: block; /* ブロック要素として表示 */
     padding: 15px 30px;
     background-color: #ffffff; /* 白色の背景 */
     color: #0366d6; /* 青色の文字 */
