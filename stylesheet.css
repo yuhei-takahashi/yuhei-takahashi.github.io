@@ -2,6 +2,17 @@
   box-sizing: border-box;
 }
 
+#home {
+  font-weight: bold;
+  font-size: 24px;
+  color: white; /* 白色の文字色を指定 */
+  text-decoration: none;
+}
+
+#home:hover {
+  color: #f0f; /* ホバー時の文字色を変更 */
+}
+
 body {
   margin: 0;
   font-family: "Hiragino Kaku Gothic ProN";
