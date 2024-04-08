@@ -18,7 +18,7 @@
     padding: 12px 25px;
     background-color: #ffffff; /* 白色の背景 */
     color: #0366d6; /* 青色の文字 */
-    font-size: 13px;
+    font-size: 16px;
     font-weight: normal;
     text-decoration: none;
     border-radius: 2px;
@@ -33,7 +33,7 @@
 }
 
 .description {
-    font-size: 8px; /* 説明のフォントサイズを小さく */
+    font-size: 10px; /* 説明のフォントサイズを小さく */
     color: #cccccc; /* 説明の文字色 */
     left: 0; /* 左端に配置 */
     position: relative; /* 相対位置指定 */
