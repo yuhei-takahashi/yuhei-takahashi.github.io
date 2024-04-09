@@ -26,7 +26,7 @@
     font-weight: normal;
     text-decoration: none;
     border-radius: 2px;
-    border: 2px solid #cccccc; /* 灰色の枠線 */
+    border: 3px solid #cccccc; /* 灰色の枠線 */
     cursor: pointer;
     transition: background-color 0.3s ease;
     position: relative; /* 相対位置指定 */
