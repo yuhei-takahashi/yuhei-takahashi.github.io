@@ -40,28 +40,33 @@
 
 
 .github-button-container {
-  width: 55px; /* ブロックの幅を指定 */
+  display: flex;
+  align-items: center; /* ボタンと説明文を中央揃え */
 }
 
 .github-button {
-    display: inline-block;
-    padding: 15px 30px;
-    background-color: #ffffff; /* 白色の背景 */
-    color: #0366d6; /* 青色の文字 */
-    font-size: 16px;
-    font-weight: normal;
-    text-decoration: none;
-    border-radius: 2px;
-    border: 3px solid #cccccc; /* 灰色の枠線 */
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    position: relative; /* 相対位置指定 */
+  padding: 15px 30px;
+  background-color: #ffffff; /* 白色の背景 */
+  color: #0366d6; /* 青色の文字 */
+  font-size: 16px;
+  font-weight: normal;
+  text-decoration: none;
+  border-radius: 2px;
+  border: 3px solid #cccccc; /* 灰色の枠線 */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  position: relative; /* 相対位置指定 */
 }
 
 .github-button:hover {
-    background-color: #f5f5f5; /* ホバー時の背景色 */
+  background-color: #f5f5f5; /* ホバー時の背景色 */
 }
 
+.button-description {
+  font-size: 14px; /* 少し小さい文字サイズ */
+  color: #808080; /* 灰色の文字色 */
+  margin-left: 10px; /* ボタンと説明文の間隔を設定 */
+}
 
 
 .description {
