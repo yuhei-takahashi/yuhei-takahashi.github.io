@@ -13,6 +13,10 @@
   color: #f0f; /* ホバー時の文字色を変更 */
 }
 
+.github-button-container {
+  width: 35px; /* ブロックの幅を指定 */
+}
+
 .github-button {
     display: inline-block;
     padding: 15px 30px;
