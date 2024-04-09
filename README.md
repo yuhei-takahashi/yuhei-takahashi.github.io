@@ -1,2 +1,2 @@
-# yuhei-takahashi.github.io
+# ホームページ
 https://yuhei-takahashi.github.io/
