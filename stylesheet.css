@@ -201,6 +201,8 @@ header {
   padding-right: 5%;
   background-color: #f7f7f7;
   text-align: center;
+  max-width: 100%;
+  overflow: hidden; 
 }
 
 .heading {
