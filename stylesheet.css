@@ -204,6 +204,7 @@ header {
   max-width: 100%;
   overflow: hidden; 
   overflow-y: scroll;
+  height: auto; 
 }
 
 .heading {
