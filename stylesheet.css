@@ -224,7 +224,7 @@ footer p {
 }
 
 /* 11. レスポンシブヘッダースタイル */
-@media (max-width: 768px) {
+@media (max-width: 1500px) {
   /* ナビゲーションリンクを非表示に */
   .header-right {
     display: none;
