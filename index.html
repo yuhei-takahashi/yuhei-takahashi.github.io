@@ -21,20 +21,17 @@
 <body>
   <header>
     <div class="container">
-      <div class="header-left">
-        <a id="home">HOME</a>
-      </div>
-      <span class="fa fa-bars menu-icon"></span>
+    <div class="header-left">
+      <a id="home">HOME</a>
     </div>
-    <div class="container">
-      <span class="fa fa-bars menu-icon"></span>
-      <div class="header-right">
-        <a href="#BIO">Biography</a>
-        <a href="#Repository">Repositories</a>
-        <a href="#Publications">Publications</a>
-        <a href="#News">News</a>
-      </div>
+    <span class="fa fa-bars menu-icon" onclick="toggleMenu()" aria-label="メニューを開く"></span>
+    <div class="header-right" id="nav-links">
+      <a href="#BIO">Biography</a>
+      <a href="#Repository">Repositories</a>
+      <a href="#Publications">Publications</a>
+      <a href="#News">News</a>
     </div>
+  </div>
   <style>
         .media-container {
             display: flex;
