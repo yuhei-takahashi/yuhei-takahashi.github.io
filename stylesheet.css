@@ -21,6 +21,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: nowrap;
   padding: 0 20px;
 }
 
@@ -56,7 +57,7 @@ header {
 /* 4. メインコンテナのスタイル */
 .container {
   width: 100%;
-  max-width: 1200px; /* 最大幅を設定 */
+  max-width: none; /* 最大幅を設定 */
   padding: 0 15px;
   margin: 0 auto;
 }
