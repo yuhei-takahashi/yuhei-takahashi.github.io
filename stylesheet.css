@@ -25,6 +25,16 @@ header {
   padding: 0 20px;
 }
 
+header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1600px; /* 大画面用に拡大 */
+  padding: 0 30px; /* パディングを増やす */
+  margin: 0 auto;
+}
+
 /* ホームリンクのスタイル */
 .header-left a#home {
   font-weight: bold;
