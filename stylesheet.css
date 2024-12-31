@@ -24,6 +24,7 @@ header {
   padding: 0 20px;
 }
 
+/* ホームリンクのスタイル */
 .header-left a#home {
   font-weight: bold;
   font-size: 24px;
@@ -35,6 +36,7 @@ header {
   color: #f0f;
 }
 
+/* ナビゲーションリンクのスタイル */
 .header-right {
   display: flex;
   align-items: center;
@@ -210,47 +212,37 @@ footer p {
   }
 }
 
-/* 11. その他のスタイル調整 */
+/* 11. レスポンシブヘッダースタイル */
+@media (max-width: 768px) {
+  /* ナビゲーションリンクを非表示に */
+  .header-right {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: rgba(34,49,52,0.9);
+    position: absolute;
+    top: 65px; /* ヘッダーの高さ */
+    left: 0;
+  }
 
-/* 既存の .github-button クラスを修正または削除 */
-/* ここではソーシャルアイコンを使用するため、.github-button の使用は不要になります */
+  /* ハンバーガーメニューアイコンを表示 */
+  .menu-icon {
+    display: block;
+  }
 
-/* .github-button-container クラスの修正 */
-.github-button-container {
-  width: auto; /* 固定幅を解除 */
-}
+  /* ナビゲーションリンクがアクティブなときに表示 */
+  .header-right.active {
+    display: flex;
+  }
 
-/* .github-button クラスの修正 */
-.github-button {
-  display: inline-block;
-  padding: 10px 20px; /* パディングを調整 */
-  background-color: #ffffff;
-  color: #0366d6;
-  font-size: 16px;
-  font-weight: normal;
-  text-decoration: none;
-  border-radius: 2px;
-  border: 3px solid #cccccc;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.github-button:hover {
-  background-color: #f5f5f5;
-}
-
-/* .button-description クラスの修正 */
-.button-description {
-  font-size: 14px;
-  color: #808080;
-  margin-left: 10px;
-}
-
-/* .description クラスの修正 */
-.description {
-  font-size: 12px;
-  color: #cccccc;
-  position: relative;
+  /* ナビゲーションリンクのスタイル調整 */
+  .header-right a {
+    padding: 15px 0;
+    width: 100%;
+    text-align: center;
+    border-top: 1px solid #444;
+    line-height: normal; /* 行間をリセット */
+  }
 }
 
 /* リストアイテム内の h3 をインライン表示にする */
