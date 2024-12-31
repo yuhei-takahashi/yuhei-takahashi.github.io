@@ -72,6 +72,16 @@ header {
   width: 100%;
 }
 
+.message-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 80px 5% 80px 5%;
+  background-color: #ffffff;
+  text-align: center;
+  width: 100%;
+}
+
 /* 6. ヘディングのスタイル */
 .heading {
   width: 100%;
