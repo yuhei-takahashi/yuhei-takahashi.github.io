@@ -1,7 +1,5 @@
 /* 1. 全ての要素に box-sizing を適用 */
-*,
-*::before,
-*::after {
+*, *::before, *::after {
   box-sizing: border-box;
 }
 
@@ -12,7 +10,7 @@ body {
   padding-top: 65px; /* ヘッダーの高さに合わせる */
 }
 
-/* 3. ヘッダーのスタイル */
+/* 3. ヘッダーのFlexboxレイアウト */
 header {
   height: 65px;
   width: 100%;
@@ -26,8 +24,15 @@ header {
   padding: 0 20px;
 }
 
-.logo {
-  width: 45px;
+.header-left a#home {
+  font-weight: bold;
+  font-size: 24px;
+  color: white;
+  text-decoration: none;
+}
+
+.header-left a#home:hover {
+  color: #f0f;
 }
 
 .header-right {
@@ -51,14 +56,14 @@ header {
   width: 100%;
   max-width: 1200px; /* 最大幅を設定 */
   padding: 0 15px;
-  margin: 0 auto;
+  margin: 0 auto; /* 中央揃え */
 }
 
 /* 5. レッスンラッパーのFlexboxレイアウト */
 .lesson-wrapper {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: center; /* 中央揃え */
   padding: 80px 5% 80px 5%;
   background-color: #f7f7f7;
   text-align: center;
@@ -85,17 +90,55 @@ header {
 }
 
 .left-align {
-  text-align: left;
+  text-align: left; /* 左揃え */
   width: 100%;
 }
 
-.left-align ol {
-  margin-left: 20px;
-  padding-left: 0;
-  list-style-position: inside;
+/* リストアイテム内のスタイル */
+.left-align li {
+  margin-bottom: 15px; /* リストアイテム間のスペース */
 }
 
-/* 7. レッスンアイテムのFlexboxレイアウト */
+.left-align li span.publication-author {
+  display: block; /* 著者部分をブロック表示 */
+  font-weight: bold;
+}
+
+.left-align li span.publication-title {
+  display: block; /* タイトル部分をブロック表示 */
+  margin-top: 5px;
+}
+
+.left-align li span.publication-event {
+  display: block; /* イベント情報部分をブロック表示 */
+  margin-top: 5px;
+}
+
+.left-align li span.underline-text {
+  text-decoration: underline;
+}
+
+/* 7. ソーシャルメディアアイコンのスタイル */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+  gap: 15px; /* アイコン間のスペース */
+}
+
+.social-icon {
+  font-size: 24px;
+  color: #0366d6;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.social-icon:hover {
+  color: #0056b3;
+  transform: scale(1.2);
+}
+
+/* 8. レッスンアイテムのFlexboxレイアウト */
 .lesson-container {
   display: flex;
   flex-wrap: wrap;
@@ -132,7 +175,7 @@ header {
   color: #b3aeb5;
 }
 
-/* 8. フッターのスタイル */
+/* 9. フッターのスタイル */
 footer {
   padding: 30px 0 20px 0;
   text-align: center;
@@ -148,7 +191,7 @@ footer p {
   font-size: 12px;
 }
 
-/* 9. レスポンシブデザイン */
+/* 10. レスポンシブデザイン */
 @media (max-width: 1200px) {
   .lesson {
     width: 30%; /* 3列レイアウト */
@@ -177,13 +220,23 @@ footer p {
   .heading h3 {
     font-size: 14px;
   }
+
+  .social-icons {
+    gap: 10px; /* アイコン間のスペースを調整 */
+  }
 }
 
-/* 10. その他のスタイル調整 */
+/* 11. その他のスタイル調整 */
+
+/* 既存の .github-button クラスを修正または削除 */
+/* ここではソーシャルアイコンを使用するため、.github-button の使用は不要になります */
+
+/* .github-button-container クラスの修正 */
 .github-button-container {
   width: auto; /* 固定幅を解除 */
 }
 
+/* .github-button クラスの修正 */
 .github-button {
   display: inline-block;
   padding: 10px 20px; /* パディングを調整 */
@@ -202,107 +255,16 @@ footer p {
   background-color: #f5f5f5;
 }
 
+/* .button-description クラスの修正 */
 .button-description {
   font-size: 14px;
   color: #808080;
   margin-left: 10px;
 }
 
+/* .description クラスの修正 */
 .description {
   font-size: 12px;
   color: #cccccc;
   position: relative;
-}
-
-.signup,
-.facebook,
-.twitter,
-.instagram,
-.linkedin {
-  /* 共通のボタンスタイルがあればここに追加 */
-}
-
-.btn-wrapper {
-  text-align: center;
-}
-
-.btn {
-  padding: 8px 24px;
-  color: white;
-  display: inline-block;
-  opacity: 0.8;
-  border-radius: 4px;
-  text-align: center;
-}
-
-.btn:hover {
-  opacity: 1;
-}
-
-.fa {
-  margin-right: 5px;
-}
-
-.message-wrapper {
-  height: auto;
-  border-bottom: 1px solid #eee;
-  padding-bottom: 80px;
-  text-align: center;
-}
-
-.message {
-  padding: 15px 40px;
-  background-color: #5dca88;
-  cursor: pointer;
-  box-shadow: 0px 7px #1a7940;
-}
-
-.message:active {
-  position: relative;
-  top: 7px;
-  box-shadow: none;
-}
-
-.menu-icon {
-  color: white;
-  float: right;
-  font-size: 25px;
-  padding: 21px 0;
-  display: none;
-}
-
-/* 11. ハンバーガーメニューのスタイル（必要に応じて） */
-@media (max-width: 670px) {
-  .header-right {
-    display: none;
-  }
-
-  .menu-icon {
-    display: block;
-  }
-
-  .top-wrapper .btn {
-    width: 100%;
-  }
-
-  .twitter,
-  .instagram {
-    margin-top: 10px;
-  }
-
-  .top-wrapper {
-    text-align: left;
-  }
-
-  .top-wrapper h1 {
-    font-size: 24px;
-  }
-
-  .top-wrapper p {
-    font-size: 14px;
-  }
-
-  .message-wrapper .btn {
-    width: 100%;
-  }
 }
