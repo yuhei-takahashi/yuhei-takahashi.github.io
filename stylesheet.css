@@ -224,7 +224,7 @@ footer p {
 }
 
 /* 11. レスポンシブヘッダースタイル */
-@media (max-width: 1500px) {
+@media (max-width: 768px) {
   /* ナビゲーションリンクを非表示に */
   .header-right {
     display: none;
@@ -239,6 +239,12 @@ footer p {
   /* ハンバーガーメニューアイコンを表示 */
   .menu-icon {
     display: block; /* モバイルでは表示 */
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    color: white; /* 目立つ色に変更 */
+    font-size: 24px;
+    cursor: pointer;
   }
 
   /* ナビゲーションリンクがアクティブなときに表示 */
