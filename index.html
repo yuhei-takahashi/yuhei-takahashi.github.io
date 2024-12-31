@@ -16,6 +16,21 @@
   </style>
 </head>
 
+<script>
+  function toggleMenu() {
+    var navLinks = document.getElementById('nav-links');
+    navLinks.classList.toggle('active');
+  }
+
+  // メニュー外をクリックしたときにメニューを閉じる
+  document.addEventListener('click', function(event) {
+    var navLinks = document.getElementById('nav-links');
+    var menuIcon = document.querySelector('.menu-icon');
+    if (!navLinks.contains(event.target) && !menuIcon.contains(event.target)) {
+      navLinks.classList.remove('active');
+    }
+  });
+</script>
   
 
 <body>
