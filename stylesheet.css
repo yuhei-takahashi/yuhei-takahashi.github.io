@@ -262,6 +262,17 @@ footer p {
   }
 }
 
+/* 大画面用メディアクエリ */
+@media (min-width: 769px) {
+  .menu-icon {
+    display: none; /* 大画面では非表示 */
+  }
+
+  .header-right {
+    display: flex !important; /* ナビゲーションリンクを常に表示 */
+  }
+}
+
 /* リストアイテム内の h3 をインライン表示にする */
 .left-align li h3 {
   display: inline; /* インライン表示に変更 */
