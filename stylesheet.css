@@ -227,7 +227,13 @@ footer p {
 
   /* ハンバーガーメニューアイコンを表示 */
   .menu-icon {
-    display: block;
+    display: block; /* モバイルでは表示 */
+    position: absolute; /* ヘッダー内での固定位置 */
+    top: 15px; /* ヘッダー内での上部からの距離 */
+    right: 20px; /* ヘッダー内での右端からの距離 */
+    color: white; /* アイコンの色を白に変更 */
+    font-size: 24px; /* アイコンのサイズを調整 */
+    cursor: pointer;
   }
 
   /* ナビゲーションリンクがアクティブなときに表示 */
@@ -291,5 +297,3 @@ footer p {
   display: block; /* 新しい行に表示 */
   margin-top: 5px;
 }
-
-
