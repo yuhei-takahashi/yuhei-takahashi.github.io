@@ -332,6 +332,8 @@ footer p {
 
 .contact-section {
   text-align: center; /* テキストを中央揃え */
+  width: 60%;              /* 幅を調整 */
+  margin: 0 auto;          /* 左右のマージンを自動にして中央揃え */
 }
 
 .subsection {
