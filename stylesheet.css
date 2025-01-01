@@ -338,6 +338,6 @@ footer p {
 
 .subsection {
   text-align: center; /* テキストを中央揃え */
-  width: 80%;              /* 幅を調整 */
+  width: 100%;              /* 幅を調整 */
   margin: 0 auto;          /* 左右のマージンを自動にして中央揃え */
 }
