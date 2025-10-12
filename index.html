@@ -1,117 +1,164 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Yuhei Takahashi (高橋侑平)</title>
-  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-  <link rel="stylesheet" type="text/css" href="stylesheet.css">
- 
-  <style>
-    #target-section {
-      margin-top: 300px;
-      padding: 20px;
-      border: 1px solid #ccc;
-    }
-  </style>
-</head>
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
-<script>
-  function toggleMenu() {
-    var navLinks = document.getElementById('nav-links');
-    navLinks.classList.toggle('active');
+  <style>
+  /* ===================================================
+     ▼ ベース設定
+  =================================================== */
+  *, *::before, *::after {
+    box-sizing: border-box;
   }
 
-  // メニュー外をクリックしたときにメニューを閉じる
-  document.addEventListener('click', function(event) {
-    var navLinks = document.getElementById('nav-links');
-    var menuIcon = document.querySelector('.menu-icon');
-    if (!navLinks.contains(event.target) && !menuIcon.contains(event.target)) {
-      navLinks.classList.remove('active');
-    }
-  });
-</script>
-  
+  body {
+    margin: 0;
+    font-family: "Hiragino Kaku Gothic ProN", sans-serif;
+    padding-top: 65px; /* 固定ヘッダー分の余白 */
+    background-color: #f7f7f7;
+  }
 
-<body>
-  <header>
-    <div class="container">
-    <div class="header-left">
-      <a id="home">HOME</a>
-    </div>
-    <span class="fa fa-bars menu-icon" onclick="toggleMenu()" aria-label="メニューを開く"></span>
-    <div class="header-right" id="nav-links">
-      <a href="#BIO">Biography</a>
-      <a href="#Repository">Repositories</a>
-      <a href="#Publications">Publications</a>
-      <a href="#News">News</a>
-    </div>
-  </div>
-  <style>
-        .media-container {
-            display: flex;
-            align-items: center;
-        }
+  /* ===================================================
+     ▼ ヘッダー
+  =================================================== */
+  header {
+    height: 65px;
+    width: 100%;
+    background-color: rgba(34,49,52,0.9);
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+  }
 
-        .media-logo {
-            margin-right: 10px; /* ロゴ間の余白 */
-        }
-    </style>
-  </header>
+  header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1600px;
+    padding: 0 30px;
+    margin: 0 auto;
+  }
 
-  
-  <div class="top-wrapper">
-    <div class="container">
-      <h1>Yuhei Takahashi<br>高橋　侑平</h1>
-      <p><a href="https://www.hitachi.co.jp/">Hitachi, Ltd.</a>（日立製作所）</p>
-      <div class="contact-section">
-        <p><span class="bold-text">Contact</span></p>
-        <p>e-mail: cyjk1101@mail4.doshisha.ac.jp</p>
-<!--         <a href="https://www.instagram.com/t.yu__hey/" class="btn instagram"><span class="fa fa-instagram"></span>Instagram</a> -->
-<!--         <a href="https://jp.linkedin.com/in/yuhei-takahashi-8b990b1a7" class="btn linkedin"><span class="fa fa-linkedin"></span>LinkedIn</a> -->
-      </div>
-    </div>
-  </div>
+  .header-left a#home {
+    font-weight: bold;
+    font-size: 24px;
+    color: white;
+    text-decoration: none;
+  }
 
-<div id="BIO">
-  <div class="lesson-wrapper">
-    <div class="container">
-      <div class="heading">
-        <h2>Biography</h2>
-        <div class="contact-section">
-          <div class="left-align">
-            <h3>2017年4月　同志社大学 理工学部 インテリジェント情報工学科　入学</h3>
-            <h3>2021年3月　同上　卒業</h3>
-            <h3>2021年4月　同志社大学 大学院理工学研究科　情報工学専攻　博士前期課程　入学</h3>
-            <h3>2023年3月　同上　卒業</h3>
-            <h3>2023年4月〜現在　株式会社日立製作所</h3>
-            <h3>2024年4月　同志社大学 大学院理工学研究科　情報工学専攻　博士後期課程　入学</h3><br>
-          </dev>
-          </dev>
-         <div class="subsection">
-          <div class="left-align">   
-          <h3>Yuhei Takahashi is currently pursuing a Ph.D. degree in the Department of Intelligent Information Engineering and Sciences, Doshisha University, Kyoto, Japan. His research interests include coding theory and radio communication systems.</h3>
-          <h3>He received the B.S. and M.S. degrees from same Department, in 2021 and 2023, respectively. Since April 2023, he has been working as a communication systems engineer with Hitachi, Ltd., Japan.</h3>
-          </div>
-          </div>
-      </div>
-    </div>
-    <div class="clear"></div>
-  </div>
-</div>
+  .header-left a#home:hover {
+    color: #f0f;
+  }
 
-  
-  <style>
-  .left-align {
+  .header-right {
+    display: flex;
+    align-items: center;
+  }
+
+  .header-right a {
+    color: white;
+    padding: 0 15px;
+    line-height: 65px;
+    transition: background-color 0.3s;
+  }
+
+  .header-right a:hover {
+    background-color: rgba(255,255,255,0.3);
+  }
+
+  /* ハンバーガーアイコン */
+  .menu-icon {
+    display: none;
+  }
+
+  /* ===================================================
+     ▼ メインブロック
+  =================================================== */
+  .container {
+    width: 100%;
+    padding: 0 15px;
+    margin: 0 auto;
+  }
+
+  .top-wrapper {
+    background: linear-gradient(180deg, #fff, #f7f7f7);
+    text-align: center;
+    padding: 100px 5% 60px 5%;
+  }
+
+  .top-wrapper h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+  }
+
+  .contact-section {
+    text-align: center;
+    width: 60%;
+    margin: 0 auto;
+  }
+
+  /* ===================================================
+     ▼ Biography / Lesson Wrapper
+  =================================================== */
+  .lesson-wrapper {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    gap: 1.5em; /* 各リポジトリ間の余白 */
+    align-items: center;
+    padding: 80px 5%;
+    background-color: #f7f7f7;
+    text-align: center;
+    width: 100%;
+  }
+
+  /* ===================================================
+     ▼ Repository セクション（白背景）
+  =================================================== */
+  #Repository {
+    width: 100%;
+    background-color: #ffffff;
+  }
+
+  .message-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 5%;
+    text-align: center;
+    background-color: #ffffff;
+  }
+
+  .heading {
+    width: 100%;
+    padding-bottom: 50px;
+    color: #5f5d60;
+  }
+
+  .heading h2 {
+    font-weight: normal;
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+
+  .left-align {
+    text-align: left;
+    width: 100%;
   }
 
   .github-button {
-    display: inline-block;
-    width: 700px; /* 横幅を固定（必要に応じて調整） */
+    display: block;
+    width: 100%;
+    max-width: 700px;
     padding: 10px 12px;
     border: 1px solid #ccc;
     border-radius: 6px;
@@ -119,6 +166,7 @@
     color: #0366d6;
     background-color: #fafafa;
     transition: background-color 0.2s;
+    margin: 0 auto 20px auto;
   }
 
   .github-button:hover {
@@ -133,165 +181,258 @@
     margin-top: 4px;
   }
 
-  /* 改行用 */
-  .github-button br {
-    line-height: 1.6em;
+  /* ===================================================
+     ▼ Publications / News
+  =================================================== */
+  .left-align ol, .left-align ul {
+    margin-left: 20px;
+    list-style-position: inside;
+    line-height: 1.6;
+    margin-bottom: 20px;
   }
-</style>
-    
-<div id="Repository">
-  <div class="message-wrapper">
+
+  .underline-text {
+    text-decoration: underline;
+    font-weight: bold;
+  }
+
+  /* ===================================================
+     ▼ フッター
+  =================================================== */
+  footer {
+    padding: 30px 0 20px 0;
+    text-align: center;
+    background-color: #f1f1f1;
+  }
+
+  footer p {
+    color: #b3aeb5;
+    font-size: 12px;
+  }
+
+  /* ===================================================
+     ▼ レスポンシブ
+  =================================================== */
+  @media (max-width: 768px) {
+    .header-right {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      background-color: rgba(34,49,52,0.9);
+      position: absolute;
+      top: 65px;
+      left: 0;
+    }
+
+    .menu-icon {
+      display: block;
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      color: white;
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+    .header-right.active {
+      display: flex;
+    }
+
+    .header-right a {
+      padding: 15px 0;
+      width: 100%;
+      text-align: center;
+      border-top: 1px solid #444;
+      line-height: normal;
+    }
+
+    .message-wrapper {
+      max-width: 100%;
+      padding: 60px 6%;
+    }
+
+    .github-button {
+      max-width: 100%;
+      font-size: 15px;
+    }
+
+    .heading h2 {
+      font-size: 24px;
+    }
+  }
+
+  @media (min-width: 769px) {
+    .menu-icon {
+      display: none;
+    }
+    .header-right {
+      display: flex !important;
+    }
+  }
+  </style>
+</head>
+
+<body>
+  <!-- ================= ヘッダー ================= -->
+  <header>
     <div class="container">
-      <div class="heading">
-        <h2>Repositories</h2>
-        <div class="subsection">
+      <div class="header-left">
+        <a id="home">HOME</a>
+      </div>
+      <span class="fa fa-bars menu-icon" onclick="toggleMenu()" aria-label="メニューを開く"></span>
+      <div class="header-right" id="nav-links">
+        <a href="#BIO">Biography</a>
+        <a href="#Repository">Repositories</a>
+        <a href="#Publications">Publications</a>
+        <a href="#News">News</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= トップセクション ================= -->
+  <div class="top-wrapper">
+    <div class="container">
+      <h1>Yuhei Takahashi<br>高橋 侑平</h1>
+      <p><a href="https://www.hitachi.co.jp/">Hitachi, Ltd.</a>（日立製作所）</p>
+      <div class="contact-section">
+        <p><strong>Contact</strong></p>
+        <p>e-mail: cyjk1101@mail4.doshisha.ac.jp</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= Biography ================= -->
+  <div id="BIO">
+    <div class="lesson-wrapper">
+      <div class="container">
+        <div class="heading">
+          <h2>Biography</h2>
           <div class="left-align">
-
-            <a class="github-button" href="https://github.com/yuhei-takahashi/IR-SA_over_Rayleigh_fading" target="_blank">
-              IR-SA_over_Rayleigh_fading<br>
-              <span class="description">
-                Repository containing folders for simulations and analysis of Irregular Repetition Slotted ALOHA.
-              </span>
-            </a>
-
-            <a class="github-button" href="https://github.com/yuhei-takahashi/Coded-Slotted_ALOHA_over_Rayleigh_Fading" target="_blank">
-              Coded-Slotted_ALOHA_over_Rayleigh_Fading<br>
-              <span class="description">
-                Repository containing folders for simulations and analysis of coded Slotted ALOHA.
-              </span>
-            </a>
-
-            <a class="github-button" href="https://github.com/yuhei-takahashi/Spatially-coupled_IR-SA_fading" target="_blank">
-              Spatially-coupled_IR-SA_fading<br>
-              <span class="description">
-                Repository containing folders for simulations and analysis of Spatially-coupled IR-SA.
-              </span>
-            </a>
-
-            <a class="github-button" href="https://github.com/yuhei-takahashi/Spatially-coupled_CSA_fading" target="_blank">
-              Spatially-coupled_CSA_fading<br>
-              <span class="description">
-                Repository containing folders for simulations and analysis of Spatially-coupled MDS coded-SA.
-              </span>
-            </a>
-
-            <a class="github-button" href="https://github.com/yuhei-takahashi/Multi-Antenna_SA" target="_blank">
-              Spatio-Temporal SIC-Based Slotted ALOHA with Multi-Antenna Reception<br>
-              <span class="description">
-                Repository containing folders for simulations and analysis of Spatio-Temporal SIC-Based SA with Multi-Antenna Reception.
-              </span>
-            </a>
-
+            <h3>2017年4月　同志社大学 理工学部 インテリジェント情報工学科　入学</h3>
+            <h3>2021年3月　同上　卒業</h3>
+            <h3>2021年4月　同志社大学 大学院理工学研究科 情報工学専攻 博士前期課程 入学</h3>
+            <h3>2023年3月　同上　卒業</h3>
+            <h3>2023年4月〜現在　株式会社日立製作所</h3>
+            <h3>2024年4月　同志社大学 大学院理工学研究科 情報工学専攻 博士後期課程 入学</h3><br>
+            <h3>Yuhei Takahashi is currently pursuing a Ph.D. degree in the Department of Intelligent Information Engineering and Sciences, Doshisha University, Kyoto, Japan. His research interests include coding theory and radio communication systems.</h3>
+            <h3>He received the B.S. and M.S. degrees from the same Department, in 2021 and 2023, respectively. Since April 2023, he has been working as a communication systems engineer with Hitachi, Ltd., Japan.</h3>
           </div>
         </div>
       </div>
     </div>
   </div>
-</div>
 
-  
-<div id="Publications">
-  <div class="lesson-wrapper">
-    <div class="container">
-      <div class="heading">
-        <h2>Publications</h2>
-        <div class="subsection">
+  <!-- ================= Repository ================= -->
+  <div id="Repository">
+    <div class="message-wrapper">
+      <div class="container">
+        <div class="heading">
+          <h2>Repositories</h2>
           <div class="left-align">
-            <ol>
-            <li>
-              <span class="underline-text">Y. Takahashi</span>, G. Song, T. Kimura and J. Cheng,<br>
-              <span class="publication-title">"Irregular Repetition Slotted ALOHA Over Rayleigh Block Fading Channels: Bounds and Threshold Saturation via Spatial Coupling,"</span><br>
-              <span class="publication-details">in IEEE Access, vol. 11, pp. 106528-106543, 2023,</span><br>
-              <span class="publication-doi">doi: <a href="https://ieeexplore.ieee.org/document/10266359">10.1109/ACCESS.2023.3320575.</a></span>
-            </li>
-            <li>
-              <span class="underline-text">Y. Takahashi</span>, I. Masuo, G. Song, T. Kimura, and J. Cheng,<br>
-              <span class="publication-title">"Coded slotted ALOHA over Rayleigh block fading channels: BP threshold and converse bound,”</span><br>
-              <span class="publication-details">2023 IEEE Globecom Workshops (GC Wkshps), pp.1523-1528, 2023.</span><br>
-              <span class="publication-doi">doi: <a href="https://ieeexplore.ieee.org/document/10464976">10.1109/GCWkshps58843.2023.10464976</a></span><br>
-              <span class="publication-slide"><a href="https://www.researchgate.net/publication/379173863_Coded_Slotted_ALOHA_over_Rayleigh_Block_Fading_Channels_BP_Threshold_and_Converse_Bound">Presentation Slide.</a></span>
-            </li>
-            <li>
-              D. Fukui, <span class="underline-text">Y. Takahashi</span>, G. Song, T. Kimura, Z. Liu, and J. Cheng,<br>
-              <span class="publication-title">"Throughput Analysis of SIC-Based Two-Device Slotted ALOHA with Feedback Over Nakagami-m Fading Channels,”</span><br>
-              <span class="publication-details">in 2024 International Symposium on Information Theory and its Applications (ISITA2024), Taipei, Taiwan, pp. 131-136, 2024.</span>
-            </li>
-            </ol>
+            <a class="github-button" href="https://github.com/yuhei-takahashi/IR-SA_over_Rayleigh_fading" target="_blank">
+              IR-SA_over_Rayleigh_fading<br>
+              <span class="description">Repository containing folders for simulations and analysis of Irregular Repetition Slotted ALOHA.</span>
+            </a>
+
+            <a class="github-button" href="https://github.com/yuhei-takahashi/Coded-Slotted_ALOHA_over_Rayleigh_Fading" target="_blank">
+              Coded-Slotted_ALOHA_over_Rayleigh_Fading<br>
+              <span class="description">Repository containing folders for simulations and analysis of coded Slotted ALOHA.</span>
+            </a>
+
+            <a class="github-button" href="https://github.com/yuhei-takahashi/Spatially-coupled_IR-SA_fading" target="_blank">
+              Spatially-coupled_IR-SA_fading<br>
+              <span class="description">Repository containing folders for simulations and analysis of Spatially-coupled IR-SA.</span>
+            </a>
+
+            <a class="github-button" href="https://github.com/yuhei-takahashi/Spatially-coupled_CSA_fading" target="_blank">
+              Spatially-coupled_CSA_fading<br>
+              <span class="description">Repository containing folders for simulations and analysis of Spatially-coupled MDS coded-SA.</span>
+            </a>
+
+            <a class="github-button" href="https://github.com/yuhei-takahashi/Multi-Antenna_SA" target="_blank">
+              Spatio-Temporal SIC-Based Slotted ALOHA with Multi-Antenna Reception<br>
+              <span class="description">Repository containing folders for simulations and analysis of Spatio-Temporal SIC-Based SA with Multi-Antenna Reception.</span>
+            </a>
           </div>
-          </div>
-        <h2>国内発表</h2>
-        <div class="subsection">
-          <div class="left-align">
-            <ol>
-            <li><span class="underline-text">高橋侑平</span>, 宋光輝, 木村共孝, 程俊，<br>"レイリーフェージング環境における不規則反復Slotted ALOHAシステム：理論限界とMAP閾値,”<br>第45回情報理論とその応用シンポジウム (SITA2022), pp. 88-93, 2022年11月.</li>
-            <li>尾﨑稜, 福井大貴, <span class="underline-text">高橋侑平</span>, 木村共孝, 程俊，<br>"フィードバックと分散型電力制御を用いたSICに基づくSlotted ALOHAのスループット解析,”<br>第47回情報理論とその応用シンポジウム (SITA2024), pp. 53-57, 2024年12月.</li>
-            <li>増尾一平, <span class="underline-text">高橋侑平</span>, 黒田直希, 木村共孝, 程俊，<br>"レイリーフェージング通信路における空間結合符号化Slotted ALOHAシステム,”<br>第47回情報理論とその応用シンポジウム (SITA2024), pp. 139-144, 2024年12月.</li>
-            </ol>
-          </div>
-           </div>
+        </div>
       </div>
     </div>
-      <div class="clear"></div>
-    </div>
-   </div>
-  
+  </div>
 
-  
-<div id="News">
-  <div class="message-wrapper">
-    <div class="container">
-      <div class="heading">
-        <h2>News</h2>
+  <!-- ================= Publications ================= -->
+  <div id="Publications">
+    <div class="lesson-wrapper">
+      <div class="container">
+        <div class="heading">
+          <h2>Publications</h2>
+          <div class="left-align">
+            <ol>
+              <li><span class="underline-text">Y. Takahashi</span>, G. Song, T. Kimura and J. Cheng,<br>
+              "Irregular Repetition Slotted ALOHA Over Rayleigh Block Fading Channels: Bounds and Threshold Saturation via Spatial Coupling,"<br>
+              IEEE Access, vol. 11, pp. 106528-106543, 2023.<br>
+              <a href="https://ieeexplore.ieee.org/document/10266359">DOI: 10.1109/ACCESS.2023.3320575</a></li>
+
+              <li><span class="underline-text">Y. Takahashi</span>, I. Masuo, G. Song, T. Kimura, and J. Cheng,<br>
+              "Coded slotted ALOHA over Rayleigh block fading channels: BP threshold and converse bound,”<br>
+              IEEE Globecom Workshops (GC Wkshps), pp.1523-1528, 2023.<br>
+              <a href="https://ieeexplore.ieee.org/document/10464976">DOI: 10.1109/GCWkshps58843.2023.10464976</a></li>
+
+              <li>D. Fukui, <span class="underline-text">Y. Takahashi</span>, G. Song, T. Kimura, Z. Liu, and J. Cheng,<br>
+              "Throughput Analysis of SIC-Based Two-Device Slotted ALOHA with Feedback Over Nakagami-m Fading Channels,”<br>
+              ISITA 2024, Taipei, Taiwan, pp. 131-136, 2024.</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= News ================= -->
+  <div id="News">
+    <div class="message-wrapper">
+      <div class="container">
+        <div class="heading">
+          <h2>News</h2>
           <div class="left-align">
             <ul>
-            <li><h3>10/2025: The source code of our research <span class="underline-text">Spatio-Temporal SIC-Based Slotted ALOHA with Multi-Antenna Reception</span> has been released on <a href="https://github.com/yuhei-takahashi/Multi-Antenna_SA">github</a>.</h3></li>
-            <li><h3>03/2025: Our research <span class="underline-text">Coded Slotted ALOHA over Rayleigh Block Fading Channels: BP and MAP Thresholds, and Converse Bound</span> has been published on <a href="https://youtu.be/15SwQzBBuZs?si=c_XqnBwxRrJGLftf">YouTube</a>.</h3></li>
-            <li><h3>08/2024: Our paper <span class="underline-text">Throughput Analysis of SIC-Based Two-Device Slotted ALOHA with Feedback Over Nakagami-m Fading Channels</span> is accepted to ISITA 2024.</h3></li>
-            <li><h3>08/2023: Our paper <span class="underline-text">Coded slotted ALOHA over Rayleigh block fading channels: BP threshold and converse bound</span> is accepted to IEEE Globecom 2023.</h3></li>
+              <li><h3>10/2025: The source code of our research <span class="underline-text">Spatio-Temporal SIC-Based Slotted ALOHA with Multi-Antenna Reception</span> has been released on <a href="https://github.com/yuhei-takahashi/Multi-Antenna_SA">GitHub</a>.</h3></li>
+              <li><h3>03/2025: Our research <span class="underline-text">Coded Slotted ALOHA over Rayleigh Block Fading Channels</span> has been published on <a href="https://youtu.be/15SwQzBBuZs">YouTube</a>.</h3></li>
+              <li><h3>08/2024: Our paper on <span class="underline-text">SIC-Based Two-Device Slotted ALOHA</span> was accepted to ISITA 2024.</h3></li>
+              <li><h3>08/2023: Our paper on <span class="underline-text">Coded Slotted ALOHA</span> was accepted to IEEE Globecom 2023.</h3></li>
             </ul>
           </div>
+        </div>
       </div>
     </div>
-      <div class="clear"></div>
-    </div>
-   </div>
+  </div>
 
-
-  
-  <script>
-    // JavaScriptでスクロールを制御する関数
-    function scrollToSection() {
-      // アンカーリンクを使用してスクロール
-      document.getElementById('Publications').scrollIntoView({ behavior: 'smooth' });
-    }
-  </script>
-  
-  
-
-  
+  <!-- ================= フッター ================= -->
   <footer>
     <div class="container">
       <p>最終更新: 2025/10/12</p>
     </div>
   </footer>
 
+  <!-- ================= JavaScript ================= -->
+  <script>
+    function toggleMenu() {
+      var navLinks = document.getElementById('nav-links');
+      navLinks.classList.toggle('active');
+    }
 
-<!--   ここからJavascript -->
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-        var home = document.getElementById('home');
-
-        // HOMEがクリックされたときの処理
-        home.addEventListener('click', function () {
-            // ページの一番上にスクロールする
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth' // スムーズなスクロールを有効にする（オプション）
-            });
-        });
+    document.addEventListener('click', function(event) {
+      var navLinks = document.getElementById('nav-links');
+      var menuIcon = document.querySelector('.menu-icon');
+      if (!navLinks.contains(event.target) && !menuIcon.contains(event.target)) {
+        navLinks.classList.remove('active');
+      }
     });
-</script>
 
-  
+    document.addEventListener('DOMContentLoaded', function () {
+      document.getElementById('home').addEventListener('click', function () {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    });
+  </script>
 </body>
 </html>
