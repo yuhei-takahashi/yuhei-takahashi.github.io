@@ -84,13 +84,15 @@ header .container {
 }
 
 .message-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 80px 5% 80px 5%;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  width: 100vw;
   background-color: #ffffff;
+  padding: 80px 5%;
   text-align: center;
-  width: 100%;
 }
 
 /* 6. ヘディングのスタイル */
