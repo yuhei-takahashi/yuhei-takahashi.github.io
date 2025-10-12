@@ -295,11 +295,16 @@ footer p {
 }
 
 .publication-list li {
-  margin-bottom: 1.8em;
-  padding-bottom: 0.5em;
-  font-size: 15px;
-  color: #333;
+  display: block !important;
+  margin-top: 1em !important;
+  margin-bottom: 2em !important;
+  padding-bottom: 0.8em !important;
+  border-bottom: 1px solid #e0e0e0 !important; /* 薄い灰色の線 */
+  line-height: 1.8 !important;
+  font-size: 15px !important;
+  color: #333 !important;
 }
+
 
 .publication-list a {
   color: #0366d6;
