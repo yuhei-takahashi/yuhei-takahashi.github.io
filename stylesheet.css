@@ -249,7 +249,35 @@ footer p {
   margin: 0 auto;
 }
 
-/* 14. レスポンシブ */
+/* ✅ 14. Newsセクション修正 */
+.news-list {
+  list-style-type: disc;
+  padding-left: 1.5em;
+  line-height: 1.6;
+}
+
+.news-list li {
+  margin-bottom: 15px;
+  font-size: 16px;
+  color: #333;
+}
+
+.news-list .date {
+  font-weight: bold;
+  color: #000;
+  margin-right: 5px;
+}
+
+.news-list a {
+  color: #0366d6;
+  text-decoration: none;
+}
+
+.news-list a:hover {
+  text-decoration: underline;
+}
+
+/* 15. レスポンシブ */
 @media (max-width: 1200px) {
   .lesson {
     width: 30%;
@@ -294,7 +322,7 @@ footer p {
   }
 }
 
-/* 15. ヘッダーのレスポンシブ */
+/* 16. ヘッダーのレスポンシブ */
 @media (max-width: 768px) {
   .header-right {
     display: none;
@@ -339,7 +367,7 @@ footer p {
   }
 }
 
-/* 16. リストの微調整 */
+/* 17. リストの微調整（News以外） */
 .left-align li {
   margin-bottom: 15px;
 }
