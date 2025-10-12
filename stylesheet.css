@@ -296,6 +296,7 @@ footer p {
 
 .publication-list li {
   margin-bottom: 1.8em;
+  padding-bottom: 0.5em;
   font-size: 15px;
   color: #333;
 }
