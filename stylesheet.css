@@ -3,25 +3,25 @@
   box-sizing: border-box;
 }
 
-/* 2. ボディにヘッダー分のパディングを追加 */
+/* 2. ボディ設定 */
 body {
   margin: 0;
   font-family: "Hiragino Kaku Gothic ProN", sans-serif;
-  padding-top: 65px; /* ヘッダーの高さに合わせる */
+  padding-top: 65px; /* 固定ヘッダー分の余白 */
+  background-color: #f7f7f7;
 }
 
-/* 3. ヘッダーのFlexboxレイアウト */
+/* 3. ヘッダー */
 header {
   height: 65px;
   width: 100%;
   background-color: rgba(34,49,52,0.9);
   position: fixed;
   top: 0;
-  z-index: 1000; /* 他の要素より前面に表示 */
+  z-index: 1000;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  flex-wrap: nowrap;
   padding: 0 20px;
 }
 
@@ -30,12 +30,12 @@ header .container {
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  max-width: 1600px; /* 大画面用に拡大 */
-  padding: 0 30px; /* パディングを増やす */
+  max-width: 1600px;
+  padding: 0 30px;
   margin: 0 auto;
 }
 
-/* ホームリンクのスタイル */
+/* ホームリンク */
 .header-left a#home {
   font-weight: bold;
   font-size: 24px;
@@ -47,7 +47,7 @@ header .container {
   color: #f0f;
 }
 
-/* ナビゲーションリンクのスタイル */
+/* ナビゲーション */
 .header-right {
   display: flex;
   align-items: center;
@@ -64,41 +64,44 @@ header .container {
   background-color: rgba(255,255,255,0.3);
 }
 
-/* 4. メインコンテナのスタイル */
+/* 4. コンテナ */
 .container {
   width: 100%;
-  max-width: none; /* 最大幅を設定 */
   padding: 0 15px;
   margin: 0 auto;
+  max-width: none;
 }
 
-/* 5. レッスンラッパーのFlexboxレイアウト */
+/* 5. レッスンセクション */
 .lesson-wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 80px 5% 80px 5%;
+  padding: 80px 5%;
   background-color: #f7f7f7;
   text-align: center;
   width: 100%;
 }
 
+/* ✅ 6. Repositoryセクション（白背景） */
+#Repository {
+  width: 100%;
+  background-color: #ffffff; /* 背景を全幅で白に */
+}
+
 .message-wrapper {
-  position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
-  width: 100vw; /* ← ブラウザ幅いっぱいに */
-  background-color: #ffffff;
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
+  max-width: 1200px; /* 中央揃えの範囲 */
+  margin: 0 auto;
   padding: 80px 5%;
   text-align: center;
+  background-color: #ffffff;
 }
 
-/* 6. ヘディングのスタイル */
+/* 7. 見出し */
 .heading {
   width: 100%;
   padding-bottom: 50px;
@@ -117,6 +120,7 @@ header .container {
   font-size: 16px;
 }
 
+/* 8. 左揃えブロック */
 .left-align {
   text-align: left;
   width: 100%;
@@ -126,17 +130,17 @@ header .container {
   margin-left: 20px;
   padding-left: 0;
   list-style-position: inside;
-  line-height: 1.6; /* 行間を広げる（1.5 ～ 1.8がおすすめ） */
-  margin-bottom: 20px; /* 各リストアイテム間のスペース */
+  line-height: 1.6;
+  margin-bottom: 20px;
 }
 
-/* 7. ソーシャルメディアアイコンのスタイル */
+/* 9. ソーシャルアイコン */
 .social-icons {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 15px;
-  gap: 15px; /* アイコン間のスペース */
+  gap: 15px;
 }
 
 .social-icon {
@@ -150,7 +154,7 @@ header .container {
   transform: scale(1.2);
 }
 
-/* 8. レッスンアイテムのFlexboxレイアウト */
+/* 10. レッスンカード */
 .lesson-container {
   display: flex;
   flex-wrap: wrap;
@@ -163,7 +167,7 @@ header .container {
   padding: 20px;
   border: 1px solid #ccc;
   border-radius: 8px;
-  width: 23%; /* 4列レイアウト */
+  width: 23%;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
@@ -187,7 +191,7 @@ header .container {
   color: #b3aeb5;
 }
 
-/* 9. フッターのスタイル */
+/* 11. フッター */
 footer {
   padding: 30px 0 20px 0;
   text-align: center;
@@ -203,26 +207,68 @@ footer p {
   font-size: 12px;
 }
 
-/* 10. レスポンシブデザイン */
+/* 12. GitHubボタン */
+.left-align .github-button {
+  display: block;
+  width: 100%;
+  max-width: 600px;
+  padding: 10px 20px;
+  background-color: #ffffff;
+  color: #0366d6;
+  font-size: 16px;
+  text-decoration: none;
+  border-radius: 4px;
+  border: 2px solid #cccccc;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  margin: 0 auto 20px auto;
+  text-align: left;
+}
+
+.left-align .github-button:hover {
+  background-color: #f5f5f5;
+  color: #0056b3;
+}
+
+.left-align .description {
+  font-size: 12px;
+  color: #666666;
+  display: block;
+  margin-top: 5px;
+}
+
+/* 13. お問い合わせセクション */
+.contact-section {
+  text-align: center;
+  width: 60%;
+  margin: 0 auto;
+}
+
+.subsection {
+  text-align: center;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* 14. レスポンシブ */
 @media (max-width: 1200px) {
   .lesson {
-    width: 30%; /* 3列レイアウト */
+    width: 30%;
   }
 }
 
 @media (max-width: 900px) {
   .lesson {
-    width: 45%; /* 2列レイアウト */
+    width: 45%;
   }
 }
 
 @media (max-width: 600px) {
   .lesson {
-    width: 100%; /* 1列レイアウト */
+    width: 100%;
   }
 
   .lesson-wrapper {
-    padding: 60px 10% 60px 10%;
+    padding: 60px 10%;
   }
 
   .heading h2 {
@@ -234,115 +280,78 @@ footer p {
   }
 
   .social-icons {
-    gap: 10px; /* アイコン間のスペースを調整 */
+    gap: 10px;
+  }
+
+  .message-wrapper {
+    padding: 60px 6%;
+    max-width: 100%;
+  }
+
+  .left-align .github-button {
+    width: 100%;
+    font-size: 15px;
   }
 }
 
-/* 11. レスポンシブヘッダースタイル */
+/* 15. ヘッダーのレスポンシブ */
 @media (max-width: 768px) {
-  /* ナビゲーションリンクを非表示に */
   .header-right {
     display: none;
     flex-direction: column;
     width: 100%;
     background-color: rgba(34,49,52,0.9);
     position: absolute;
-    top: 65px; /* ヘッダーの高さ */
+    top: 65px;
     left: 0;
   }
 
-  /* ハンバーガーメニューアイコンを表示 */
   .menu-icon {
-    display: block; /* モバイルでは表示 */
+    display: block;
     position: absolute;
     top: 15px;
     right: 20px;
-    color: white; /* 目立つ色に変更 */
+    color: white;
     font-size: 24px;
     cursor: pointer;
   }
 
-  /* ナビゲーションリンクがアクティブなときに表示 */
   .header-right.active {
     display: flex;
   }
 
-  /* ナビゲーションリンクのスタイル調整 */
   .header-right a {
     padding: 15px 0;
     width: 100%;
     text-align: center;
     border-top: 1px solid #444;
-    line-height: normal; /* 行間をリセット */
+    line-height: normal;
   }
 }
 
-/* 大画面用メディアクエリ */
 @media (min-width: 769px) {
   .menu-icon {
-    display: none; /* 大画面では非表示 */
+    display: none;
   }
 
   .header-right {
-    display: flex !important; /* ナビゲーションリンクを常に表示 */
+    display: flex !important;
   }
 }
 
-/* リストアイテム内の h3 をインライン表示にする */
-.left-align li h3 {
-  display: inline; /* インライン表示に変更 */
-  font-size: 16px; /* 必要に応じて調整 */
-  font-weight: normal; /* 見出しの太さを通常に */
-  margin: 0; /* マージンをリセット */
+/* 16. リストの微調整 */
+.left-align li {
+  margin-bottom: 15px;
 }
 
-/* リストアイテム間のスペース */
-.left-align li {
-  margin-bottom: 15px; /* リストアイテム間のスペース */
+.left-align li h3 {
+  display: inline;
+  font-size: 16px;
+  font-weight: normal;
+  margin: 0;
 }
 
 .left-align li span.underline-text {
   text-decoration: underline;
-  font-weight: bold; /* 強調したい場合 */
-}
-
-/* 12. .github-button のスタイル */
-.left-align .github-button {
-  display: inline-block;
-  padding: 10px 20px; /* パディングを調整 */
-  background-color: #ffffff;
-  color: #0366d6;
-  font-size: 16px;
-  font-weight: normal;
-  text-decoration: none;
-  border-radius: 4px;
-  border: 2px solid #cccccc;
-  cursor: pointer;
-  transition: background-color 0.3s ease, color 0.3s ease;
-  margin-bottom: 20px; /* ボタン間のスペース */
-}
-
-.left-align .github-button:hover {
-  background-color: #f5f5f5;
-  color: #0056b3;
-}
-
-/* 13. .description のスタイル */
-.left-align .description {
-  font-size: 12px;
-  color: #666666;
-  display: block; /* 新しい行に表示 */
-  margin-top: 5px;
-}
-
-.contact-section {
-  text-align: center; /* テキストを中央揃え */
-  width: 60%;              /* 幅を調整 */
-  margin: 0 auto;          /* 左右のマージンを自動にして中央揃え */
-}
-
-.subsection {
-  text-align: center; /* テキストを中央揃え */
-  width: 100%;              /* 幅を調整 */
-  margin: 0 auto;          /* 左右のマージンを自動にして中央揃え */
+  font-weight: bold;
 }
