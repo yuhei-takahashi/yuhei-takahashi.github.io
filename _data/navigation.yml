@@ -1,0 +1,11 @@
+main:
+  - title: "Home"
+    url: /
+  - title: "Biography"
+    url: /biography/
+  - title: "Publications"
+    url: /publications/
+  - title: "Repositories"
+    url: /repositories/
+  - title: "News"
+    url: /news/
