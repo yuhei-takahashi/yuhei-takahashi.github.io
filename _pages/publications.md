@@ -27,10 +27,11 @@ permalink: /publications/
    [URL](https://ieeexplore.ieee.org/document/11375547)
 
 5. **<u>Y. Takahashi</u>**, D. Fukui, G. Song, T. Kimura, Z. Liu, and J. Cheng,  
-   “Throughput Analysis of SIC-Based Two-Device Slotted ALOHA with Feedback Over Nakagami-m Fading Channels,”  
+   “Irregular Repetition Slotted ALOHA with Multi-Antenna Reception over Rayleigh Block Fading Channels,”  
    *the 2026 IEEE International Symposium on Information Theory (ISIT 2026)*, Guangzhou, China, 2026.
+   [URL](https://repository.essex.ac.uk/43123/1/Final_Submission__ISIT_Takahashi_Irregular_Repetition_Slotted_ALOHA_with_Multi_Antenna.pdf)
    
-6. D. Fukui, **<u>Y. Takahashi</u>**, G. Song, T. Kimura, Z. Liu, and J. Cheng,  
+7. D. Fukui, **<u>Y. Takahashi</u>**, G. Song, T. Kimura, Z. Liu, and J. Cheng,  
    “Sum-rate analysis of slotted ALOHA with buffered inter- and intra-slot SIC under mixture gamma fading,”  
    *IEICE Transactions on Communications*, 2026.
    [URL](https://ieeexplore.ieee.org/document/11595107)
