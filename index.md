@@ -32,7 +32,7 @@ feature_row:
 
 I am currently pursuing a Ph.D. degree in the Department of Intelligent Information Engineering and Sciences, Doshisha University, Kyoto, Japan. Since April 2023, I have also been working as a communication systems engineer with Hitachi, Ltd., Japan.
 
-My research interests include **random access protocols, irregular repetition slotted ALOHA, coded slotted ALOHA, multi-antenna reception, successive interference cancellation, coding theory, and wireless communication systems**.
+My research interests include random access protocols, irregular repetition slotted ALOHA, coded slotted ALOHA, multi-antenna reception, successive interference cancellation, coding theory, and wireless communication systems.
 
 <div class="research-tags">
   <span>Random Access</span>
@@ -52,11 +52,11 @@ My research interests include **random access protocols, irregular repetition sl
 
 <div class="news-home">
 
-**10/2025** — The source code for *Spatio-Temporal SIC-Based Slotted ALOHA with Multi-Antenna Reception* was released on [GitHub](https://github.com/yuhei-takahashi/Multi-Antenna_SA).
+10/2025 — The source code for Spatio-Temporal SIC-Based Slotted ALOHA with Multi-Antenna Reception was released on [GitHub](https://github.com/yuhei-takahashi/Multi-Antenna_SA).
 
-**03/2025** — A presentation on *Coded Slotted ALOHA over Rayleigh Block Fading Channels* was published on [YouTube](https://youtu.be/15SwQzBBuZs).
+03/2025 — A presentation on *Coded Slotted ALOHA over Rayleigh Block Fading Channels* was published on [YouTube](https://youtu.be/15SwQzBBuZs).
 
-**08/2024** — Our paper on *SIC-Based Two-Device Slotted ALOHA* was accepted to ISITA 2024.
+08/2024 — Our paper on SIC-Based Two-Device Slotted ALOHA was accepted to ISITA 2024.
 
 </div>
 
