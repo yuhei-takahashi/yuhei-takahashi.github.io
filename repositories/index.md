@@ -7,7 +7,7 @@ classes: wide
 ---
 
 <div class="academic-repositories">
-  <p class="repo-page-lead">研究に用いたシミュレーションコードおよび数値解析コードをGitHubで公開しています。各項目から対応するリポジトリをご覧いただけます。</p>
+  <p class="repo-page-lead">研究に用いたシミュレーションコードおよび数値解析コードをGitHubで公開しています。</p>
 
   <div class="repo-grid">
     <a class="repo-card" href="https://github.com/yuhei-takahashi/IR-SA_over_Rayleigh_fading" target="_blank" rel="noopener noreferrer">
