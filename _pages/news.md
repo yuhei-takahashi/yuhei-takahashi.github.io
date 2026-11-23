@@ -10,7 +10,7 @@ permalink: /news/
   <span class="news-date-custom">2025年10月</span>
   <div>
     複数受信アンテナを用いたSlotted ALOHAに関する研究
-    「<strong>Spatio-Temporal SIC-Based Slotted ALOHA with Multi-Antenna Reception</strong>」
+    「Spatio-Temporal SIC-Based Slotted ALOHA with Multi-Antenna Reception」
     のソースコードを<a href="https://github.com/yuhei-takahashi/Multi-Antenna_SA">GitHub</a>で公開しました。
   </div>
 </div>
@@ -18,7 +18,7 @@ permalink: /news/
 <div class="news-entry">
   <span class="news-date-custom">2025年3月</span>
   <div>
-    「<strong>Coded Slotted ALOHA over Rayleigh Block Fading Channels</strong>」
+    「Coded Slotted ALOHA over Rayleigh Block Fading Channels」
     に関する研究発表の動画を<a href="https://youtu.be/15SwQzBBuZs">YouTube</a>で公開しました。
   </div>
 </div>
