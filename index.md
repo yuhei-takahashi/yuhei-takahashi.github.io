@@ -1,4 +1,4 @@
----
+_---
 layout: splash
 permalink: /
 title: ""
@@ -19,11 +19,14 @@ classes: wide
           </div>
         </div>
         <img class="home-profile-image"
-             src="{{ '/assets/images/profile.JPG' | relative_url }}"
-             alt="高橋侑平のプロフィール写真" width="148" height="182"
-             loading="eager" decoding="async">
+     src="{{ '/assets/images/profile.JPG' | relative_url }}"
+     alt="高橋侑平のプロフィール写真"
+     width="200"
+     height="250"
+     loading="eager"
+     decoding="async">
       </div>
-      <p class="home-introduction">無線通信に関する研究を行っています。特に、ランダムアクセス方式の理論解析、複数受信アンテナを用いたパケット復号、およびデバイス認証に取り組んでいます。</p>
+      <p class="home-introduction">無線通信に関する研究を行っています。特に、ランダムアクセス方式の理論解析、およびデバイス認証に取り組んでいます。</p>
       <div class="home-actions">
         <a class="home-button home-button--primary" href="{{ '/publications/' | relative_url }}">研究業績 <span aria-hidden="true">→</span></a>
         <a class="home-button home-button--outline" href="{{ '/assets/pdf/publications.pdf' | relative_url }}" target="_blank" rel="noopener noreferrer">業績一覧（PDF） <span aria-hidden="true">↗</span></a>
@@ -68,3 +71,4 @@ classes: wide
     </div>
   </section>
 </div>
+_
