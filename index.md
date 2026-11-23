@@ -1,68 +1,88 @@
----
-layout: splash
-permalink: /
-title: "高橋 侑平"
-header:
-  overlay_color: "#0f172a"
-  overlay_filter: "0.20"
-excerpt: >
-  <span class="hero-subtitle">Yuhei Takahashi</span><br>
-  ランダムアクセス · Slotted ALOHA · 符号理論 · 無線通信
-feature_row:
-  - title: "経歴"
-    excerpt: "学歴・職歴と現在の研究活動を紹介します。"
-    url: "/biography/"
-    btn_label: "経歴を見る"
-    btn_class: "btn--primary"
-  - title: "研究業績"
-    excerpt: "学術論文、国際会議、国内研究発表などの一覧です。"
-    url: "/publications/"
-    btn_label: "研究業績を見る"
-    btn_class: "btn--primary"
-  - title: "公開コード"
-    excerpt: "ランダムアクセスの解析・シミュレーションコードを公開しています。"
-    url: "/repositories/"
-    btn_label: "公開コードを見る"
-    btn_class: "btn--primary"
----
+<div class="academic-home">
 
-<div class="home-intro">
+  <section class="home-hero" aria-labelledby="home-name">
+    <div class="home-hero__intro">
+      <div class="home-identity">
+        <div class="home-identity__text">
+          <p class="home-kicker">RESEARCH WEBSITE</p>
+          <h1 id="home-name" class="home-name">高橋 侑平 <span>Yuhei Takahashi</span></h1>
+        </div>
+        <img
+          class="home-profile-image"
+          src="{{ '/assets/images/profile.PNG' | relative_url }}"
+          alt="高橋侑平のプロフィール写真"
+          width="136"
+          height="170"
+          loading="eager"
+          decoding="async"
+        >
+      </div>
+      <div class="home-affiliation">
+        <p>同志社大学大学院 理工学研究科 博士後期課程</p>
+        <p>株式会社日立製作所 鉄道ビジネスユニット</p>
+      </div>
+      <p class="home-introduction">
+        無線通信に関する研究を行っています。
+        特に、ランダムアクセス方式の理論解析、複数受信アンテナを用いたパケット復号、
+        およびデバイス認証に取り組んでいます。
+      </p>
+      <div class="home-actions">
+        <a class="home-button home-button--primary" href="{{ '/publications/' | relative_url }}">研究業績を見る <span aria-hidden="true">→</span></a>
+        <a class="home-button home-button--outline" href="{{ '/assets/pdf/publications.pdf' | relative_url }}" target="_blank" rel="noopener noreferrer">業績一覧（PDF） <span aria-hidden="true">↗</span></a>
+      </div>
+    </div>
 
-## 自己紹介
+    <aside class="home-focus" aria-label="主な研究分野">
+      <p class="home-focus__eyebrow">RESEARCH INTERESTS</p>
+      <h2>主な研究分野</h2>
+      <ul>
+        <li><strong>ランダムアクセス方式</strong><span>Slotted ALOHA / フェージング / マルチアンテナ</span></li>
+        <li><strong>デバイス認証</strong><span>無線周波数フィンガープリント（RFF）を用いた認証</span></li>
+      </ul>
+    </aside>
+  </section>
 
-同志社大学大学院理工学研究科の博士後期課程に在籍しています。また、2023年4月から株式会社日立製作所で通信システムの開発に携わっています。
+  <section class="home-section home-section--research" aria-labelledby="home-research-title">
+    <div class="home-section__heading">
+      <div>
+        <p class="home-section__eyebrow">ABOUT MY RESEARCH</p>
+        <h2 id="home-research-title">研究について</h2>
+      </div>
+    </div>
+    <p class="home-research-text">
+      多数の端末が無線通信路を共有する環境を対象に、衝突した信号を効率的に復号するための
+      ランダムアクセス方式を研究しています。確率モデルや反復復号の解析手法を用いて、
+      通信方式の達成性能と理論限界を明らかにすることを目指しています。
+    </p>
+    <nav class="home-secondary-links" aria-label="研究関連ページ">
+      <a href="{{ '/biography/' | relative_url }}">経歴 <span aria-hidden="true">↗</span></a>
+      <a href="{{ '/repositories/' | relative_url }}">公開コード <span aria-hidden="true">↗</span></a>
+      <a href="mailto:yuhei-takahashi@ieee.org">お問い合わせ <span aria-hidden="true">↗</span></a>
+    </nav>
+  </section>
 
-主な研究分野は、ランダムアクセス方式、Irregular Repetition Slotted ALOHA（IRSA）、Coded Slotted ALOHA（CSA）、複数受信アンテナ、逐次干渉除去（SIC）、符号理論、無線通信システムです。
+  <section class="home-section home-section--news" aria-labelledby="home-news-title">
+    <div class="home-section__heading">
+      <div>
+        <p class="home-section__eyebrow">NEWS</p>
+        <h2 id="home-news-title">お知らせ</h2>
+      </div>
+      <a class="home-more" href="{{ '/news/' | relative_url }}">一覧を見る <span aria-hidden="true">→</span></a>
+    </div>
+    <div class="home-news-list">
+      <div class="home-news-item">
+        <time datetime="2025-10">2025.10</time>
+        <p>複数受信アンテナを用いたSlotted ALOHAに関する研究の<a href="https://github.com/yuhei-takahashi/Multi-Antenna_SA">ソースコードを公開</a>しました。</p>
+      </div>
+      <div class="home-news-item">
+        <time datetime="2025-03">2025.03</time>
+        <p>「Coded Slotted ALOHA over Rayleigh Block Fading Channels」の<a href="https://youtu.be/15SwQzBBuZs">研究発表動画を公開</a>しました。</p>
+      </div>
+      <div class="home-news-item">
+        <time datetime="2024-08">2024.08</time>
+        <p>SICを用いた2端末Slotted ALOHAに関する論文がISITA 2024に採択されました。</p>
+      </div>
+    </div>
+  </section>
 
-<div class="research-tags">
-  <span>ランダムアクセス</span>
-  <span>IRSA</span>
-  <span>CSA</span>
-  <span>SIC</span>
-  <span>複数受信アンテナ</span>
-  <span>密度発展法</span>
-  <span>空間結合</span>
 </div>
-
-</div>
-
-{% include feature_row %}
-
-<div class="home-pdf-link">
-  <p>研究業績はウェブページで閲覧できるほか、PDF版でも確認できます。</p>
-  <a href="{{ '/assets/pdf/publications.pdf' | relative_url }}" class="btn btn--primary pdf-link" target="_blank" rel="noopener noreferrer"><i class="fas fa-file-pdf" aria-hidden="true"></i> 業績一覧（PDF）を開く</a>
-</div>
-
-## 最近のお知らせ
-
-<div class="news-home">
-
-2025年10月 — 複数受信アンテナを用いたSlotted ALOHAに関する研究（*Spatio-Temporal SIC-Based Slotted ALOHA with Multi-Antenna Reception*）のソースコードを[GitHub](https://github.com/yuhei-takahashi/Multi-Antenna_SA)で公開しました。
-
-2025年3月 — *Coded Slotted ALOHA over Rayleigh Block Fading Channels* の研究発表動画を[YouTube](https://youtu.be/15SwQzBBuZs)で公開しました。
-
-2024年8月 — SICを用いた2端末Slotted ALOHAに関する論文がISITA 2024に採択されました。
-
-</div>
-
-[お知らせ一覧を見る]({{ '/news/' | relative_url }}){: .btn .btn--inverse }
