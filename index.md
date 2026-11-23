@@ -71,4 +71,3 @@ classes: wide
     </div>
   </section>
 </div>
-_
