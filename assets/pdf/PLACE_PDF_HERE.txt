@@ -1,8 +1,0 @@
-このフォルダーに、別途作成した業績一覧PDFを publications.pdf という名前で配置してください。
-
-配置例：assets/pdf/publications.pdf
-
-トップページと「研究業績」ページのPDFボタンは、このファイルを新しいタブで開く設定です。
-PDFを追加するまで、ボタンから開く先は404（ファイルが見つかりません）になります。
-
-GitHub上で「Add file → Upload files」を選び、assets/pdf/ にアップロードしても構いません。
