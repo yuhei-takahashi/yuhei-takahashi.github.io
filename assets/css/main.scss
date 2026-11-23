@@ -226,10 +226,20 @@ body {
     grid-template-columns: 1fr;
   }
 
-  .news-entry {
-    grid-template-columns: 1fr;
-    gap: .15rem;
-  }
+.news-entry {
+  display: grid;
+  grid-template-columns: 8em minmax(0, 1fr);
+  gap: 1.2rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--academic-line);
+  align-items: start;
+}
+
+.news-date-custom {
+  color: var(--academic-blue);
+  font-weight: 800;
+  white-space: nowrap;
+}
 }
 
 /* 日本語サイトに適したタイポグラフィとPDFボタン */
