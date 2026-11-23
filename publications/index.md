@@ -6,7 +6,7 @@ classes: wide
 permalink: /publications/
 ---
 
-学術論文、国際会議、国内研究発表、ポスター発表の一覧です。論文のタイトルと書誌情報は原文のまま掲載しています。
+学術論文、国際会議、国内研究発表、ポスター発表の一覧です。
 
 <div class="publications-pdf">
   <a href="{{ '/assets/pdf/publications.pdf' | relative_url }}" class="btn btn--primary pdf-link" target="_blank" rel="noopener noreferrer"><i class="fas fa-file-pdf" aria-hidden="true"></i> 業績一覧（PDF）を開く</a>
