@@ -1,0 +1,269 @@
+---
+# Only the main Sass file needs front matter
+---
+
+@charset "utf-8";
+
+@import "minimal-mistakes";
+
+/* ============================================================
+   Custom academic homepage styling
+   ============================================================ */
+
+:root {
+  --academic-blue: #2563eb;
+  --academic-navy: #0f172a;
+  --academic-muted: #64748b;
+  --academic-line: #e2e8f0;
+  --academic-soft: #f8fafc;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: var(--academic-navy);
+}
+
+.masthead {
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.greedy-nav {
+  background: #fff;
+}
+
+.greedy-nav a {
+  color: #1e293b;
+}
+
+.greedy-nav a:hover {
+  color: var(--academic-blue);
+}
+
+.page__hero--overlay {
+  min-height: 390px;
+  display: flex;
+  align-items: center;
+  background:
+    radial-gradient(circle at 80% 25%, rgba(14,165,233,.30), transparent 30%),
+    radial-gradient(circle at 15% 15%, rgba(37,99,235,.28), transparent 30%),
+    linear-gradient(135deg, #0f172a, #1e293b) !important;
+}
+
+.page__hero--overlay .wrapper {
+  max-width: 1120px;
+}
+
+.page__hero--overlay .page__title {
+  font-size: clamp(2.7rem, 6vw, 5rem);
+  line-height: 1.05;
+  letter-spacing: -0.045em;
+}
+
+.page__hero--overlay .page__lead {
+  font-size: 1.12rem;
+}
+
+.hero-subtitle {
+  font-size: .48em;
+  letter-spacing: .08em;
+  font-weight: 500;
+  opacity: .92;
+}
+
+.home-intro {
+  max-width: 900px;
+  margin-bottom: 2.5rem;
+}
+
+.research-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .55rem;
+  margin: 1.4rem 0 0;
+}
+
+.research-tags span {
+  display: inline-block;
+  padding: .42rem .72rem;
+  border-radius: 999px;
+  border: 1px solid #dbeafe;
+  background: #eff6ff;
+  color: #1e40af;
+  font-size: .78rem;
+  font-weight: 700;
+}
+
+.feature__wrapper {
+  margin-top: 2rem;
+}
+
+.feature__item .archive__item {
+  height: 100%;
+  padding: 1.15rem;
+  border: 1px solid var(--academic-line);
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: 0 10px 30px rgba(15,23,42,.05);
+}
+
+.feature__item .archive__item:hover {
+  box-shadow: 0 16px 38px rgba(15,23,42,.09);
+  transform: translateY(-2px);
+  transition: .2s ease;
+}
+
+.page__content h2 {
+  margin-top: 2.6rem;
+  padding-bottom: .4rem;
+  border-bottom: 1px solid var(--academic-line);
+  font-size: 1.55rem;
+}
+
+.page__content h3 {
+  margin-top: 2rem;
+}
+
+.page__content table {
+  font-size: .88rem;
+}
+
+.page__content li {
+  margin-bottom: .8rem;
+}
+
+.repo-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.repo-card {
+  display: flex;
+  flex-direction: column;
+  gap: .65rem;
+  padding: 1.2rem 1.25rem;
+  border: 1px solid var(--academic-line);
+  border-radius: 14px;
+  background: #fff;
+  text-decoration: none !important;
+  color: inherit !important;
+  transition: .2s ease;
+}
+
+.repo-card:hover {
+  border-color: #bfdbfe;
+  box-shadow: 0 14px 34px rgba(15,23,42,.08);
+  transform: translateY(-3px);
+}
+
+.repo-card strong {
+  color: var(--academic-navy);
+  font-size: 1rem;
+}
+
+.repo-card span {
+  color: var(--academic-muted);
+  font-size: .86rem;
+  line-height: 1.6;
+}
+
+.repo-card small {
+  color: var(--academic-blue);
+  font-weight: 700;
+}
+
+.news-home p {
+  margin-bottom: 1rem;
+}
+
+.news-list-custom {
+  border-top: 1px solid var(--academic-line);
+}
+
+.news-entry {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  gap: 1.2rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--academic-line);
+}
+
+.news-date-custom {
+  color: var(--academic-blue);
+  font-weight: 800;
+}
+
+.author__content {
+  text-align: left;
+}
+
+.author__bio {
+  color: var(--academic-muted);
+}
+
+.page__footer {
+  margin-top: 4rem;
+}
+
+.btn--primary {
+  background-color: var(--academic-blue);
+}
+
+.btn--primary:hover {
+  background-color: #1d4ed8;
+}
+
+@media (max-width: 768px) {
+  .page__hero--overlay {
+    min-height: 330px;
+  }
+
+  .repo-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .news-entry {
+    grid-template-columns: 1fr;
+    gap: .15rem;
+  }
+}
+
+/* 日本語サイトに適したタイポグラフィとPDFボタン */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, sans-serif;
+  line-height: 1.8;
+}
+
+.page__hero--overlay .page__title {
+  letter-spacing: .02em;
+}
+
+.home-pdf-link {
+  margin: 2rem 0 2.5rem;
+  padding: 1.25rem 1.5rem;
+  border: 1px solid var(--academic-line);
+  border-radius: 14px;
+  background: var(--academic-soft);
+}
+
+.home-pdf-link p {
+  margin: 0 0 .9rem;
+}
+
+.publications-pdf {
+  margin: 1rem 0 2rem;
+}
+
+.pdf-link i {
+  margin-right: .4em;
+}
+
+@media (max-width: 768px) {
+  .home-pdf-link {
+    padding: 1rem;
+  }
+}
