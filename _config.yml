@@ -36,12 +36,17 @@ author:
   employer: "株式会社日立製作所／同志社大学"
   email: "yuhei-takahashi@ieee.org"
   links:
-    - label: "メール"
-      icon: "fas fa-fw fa-envelope"
-      url: "mailto:yuhei-takahashi@ieee.org"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/yuhei-takahashi"
+
+    - label: "researchmap"
+      icon: "fas fa-fw fa-book-open"
+      url: "https://researchmap.jp/yuhei-takahashi"
+
+    - label: "Google Scholar"
+      icon: "fas fa-fw fa-graduation-cap"
+      url: "https://scholar.google.com/citations?view_op=list_works&hl=en&user=ar2d3OoAAAAJ"
 
 # フッター
 footer:
