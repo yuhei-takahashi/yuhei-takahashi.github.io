@@ -5,7 +5,7 @@
 
 title: "高橋 侑平"
 name: "高橋 侑平"
-description: "高橋侑平の研究者ウェブサイト。ランダムアクセス、Slotted ALOHA、符号理論、無線通信に関する研究を紹介しています。"
+description: "高橋侑平の研究者ウェブサイト。無線通信に関する研究を紹介しています。"
 url: "https://yuhei-takahashi.github.io"
 baseurl: ""
 repository: "yuhei-takahashi/yuhei-takahashi.github.io"
@@ -30,8 +30,8 @@ enable_copy_code_button: true
 # 著者プロフィール
 author:
   name: "高橋 侑平"
-  avatar: # 画像を追加する場合は "/assets/images/profile.jpg" を指定
-  bio: "同志社大学大学院 博士後期課程／株式会社日立製作所 通信システムエンジニア"
+  avatar: "/assets/images/profile.JPG"
+  bio: "同志社大学大学院 博士後期課程／株式会社日立製作所"
   location: "日本"
   employer: "株式会社日立製作所／同志社大学"
   email: "yuhei-takahashi@ieee.org"
